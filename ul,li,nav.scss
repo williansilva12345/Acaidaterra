@@ -1,0 +1,83 @@
+@import "cores.scss"; // Certifique-se de que as cores estão definidas neste arquivo.
+
+// li , nav,ul,a 
+
+@mixin li($display, $list-style, $padding, $text, $nav) {
+  display: $display;
+  list-style: $list-style;
+  padding: $padding;
+  text-decoration: $text;
+  background: $nav;
+}
+
+nav {
+
+  @include li(flex, none, 9px, none, $nav);
+	   justify-content:space-around;
+	   
+ 
+
+}
+
+.nav1,
+.nav2 {
+  @include li(flex, none, 0px, none, none);
+  align-items: center;
+}
+
+
+.nav1 {
+  @include li(flex, none, 0px, none, none);
+  justify-content: space-around;
+  text-align: center;
+						   
+	
+	  border-radius:10px;
+
+	  
+	 
+  a {
+    position: relative;
+	letter-spacing:3px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+	background:purple;
+	top: 100%;
+      bottom: 0;
+      transition: 0.5s;
+    }
+
+    &:hover:before {
+      width: 50%; /* Expande a largura ao passar o mouse */
+      transform: translateX(100%);
+    }
+  }
+}
+
+li a {
+  margin: 10px; // Certifique-se de que este seletor está no contexto correto
+}
+	.nav1 a{
+	  
+	  text-decoration:none;
+	  color:$colornav1;
+	  transition:all 0.5s ease-in-out;
+   }
+   
+   .nav1 a:hover{
+	
+		letter-spacing:5px;
+		line-height:5px;
+   
+   }
+   
+   .nav2 a{
+		
+		text-decoration:none;
+		color:$colornav2;
+   
+				  }
+   

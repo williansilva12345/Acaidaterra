@@ -1,0 +1,248 @@
+@charset "UTF-8";
+.btn {
+  display: flex;
+  justify-content: center;
+  height: 55px;
+}
+
+.btnf {
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.5s;
+}
+
+.btnf button {
+  background: purple;
+  color: white;
+  transition: box-shadow 0.5s;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+.btnf button:hover {
+  box-shadow: 0 8px 30px red; /* sombra mais intensa ao passar o mouse */
+}
+
+.nav2 button:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #c14fbe;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  color: white;
+  transition: box-shadow 0.5s;
+}
+
+.nav2 button:nth-child(1):hover {
+  color: white;
+  box-shadow: 1px 2px 30px red;
+}
+
+#dot {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: background 0.5s ease; /* Transição suave */
+}
+
+.titulo {
+  display: flex;
+  height: 600px;
+  justify-content: space-around;
+}
+
+.subtitulo h1 {
+  text-align: center;
+  margin: 0;
+}
+
+section {
+  background: #cad600;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(1) {
+  background: #cad600;
+}
+
+.subtitulo p {
+  font-family: "Alata", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  border-radius: 10px;
+  padding: 18px;
+  letter-spacing: 3px;
+  color: white;
+  box-shadow: 1px 1px 3px purple;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil e semi-transparente */
+  line-height: 1.6em; /* Aumenta o espaçamento entre linhas */
+  background: linear-gradient(90deg, rgb(106, 0, 255) 0%, rgba(183, 0, 218, 0.9808298319) 85%, rgb(239, 0, 255) 100%);
+}
+
+.subtitulo h1 {
+  display: flex;
+  text-align: center;
+  margin: 0;
+  justify-content: center;
+}
+
+.subtitulo p {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.subtitulo {
+  padding: 20px;
+  padding: 54px;
+}
+
+.tit {
+  display: flex;
+  align-items: center; /* Alinha o ponto e o texto verticalmente */
+  gap: 10px; /* Espaçamento entre o ponto e o texto */
+  justify-content: center;
+}
+
+.bannerimg {
+  padding: 50px;
+}
+
+.bannerimg img {
+  filter: drop-shadow(2px 4px 6px black);
+  animation: anima 5s infinite alternate;
+}
+
+@keyframes anima {
+  0% {
+    transform: translateY(3px);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px);
+    transform: rotate(10deg);
+  }
+}
+nav {
+  display: flex;
+  list-style: none;
+  padding: 9px;
+  text-decoration: none;
+  background: none;
+  justify-content: space-around;
+}
+
+.nav1,
+.nav2 {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  text-decoration: none;
+  background: none;
+  align-items: center;
+}
+
+.nav1 {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  text-decoration: none;
+  background: none;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: 10px;
+}
+.nav1 a {
+  position: relative;
+  letter-spacing: 3px;
+}
+.nav1 a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: purple;
+  top: 100%;
+  bottom: 0;
+  transition: 0.5s;
+}
+.nav1 a:hover:before {
+  width: 50%; /* Expande a largura ao passar o mouse */
+  transform: translateX(100%);
+}
+
+li a {
+  margin: 10px;
+}
+
+.nav1 a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav1 a:hover {
+  letter-spacing: 5px;
+  line-height: 5px;
+}
+
+.nav2 a {
+  text-decoration: none;
+  color: red;
+}
+
+.subtitulo h1 {
+  font-family: "Poppins", sans-serif; /* Troque por qualquer uma das fontes sugeridas */
+  font-weight: 600;
+  font-style: normal;
+  font-size: 4rem;
+  padding: 20px;
+}
+
+.subtitulo p {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 16px;
+}
+
+#text {
+  transition: opacity 0.5s ease;
+}
+
+.nav1, nav2 {
+  font-family: "Alata", sans-serif;
+}
+
+.bannerimg {
+  display: flex;
+  align-items: center;
+  height: 588px;
+}
+
+.logo {
+  widht: 90px;
+  height: 90px;
+  align-self: center;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #cad600;
+}
+
+/*# sourceMappingURL=css2.css.map */

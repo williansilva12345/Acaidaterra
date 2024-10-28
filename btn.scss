@@ -1,0 +1,77 @@
+
+@import "cores.scss";
+		@mixin btn($display,$align,$center,$text,$background-btn,$none,$radius,$padding) {
+		
+		display:$display;
+		align-items:$align; 
+		justify-content:$center;
+		text-align:$text;
+		background:$background-btn;
+		border:$none ;
+		border-radius:$radius;
+		padding:$padding;
+			
+		}
+		  //CONTATO
+		.btn{
+			display:flex;
+			justify-content:center;
+			height:55px
+		}
+		
+		.btnf{
+			display:flex;
+			align-items:center;
+		    transition : box-shadow .5s;
+		}
+		
+		.btnf button{
+		   
+		
+		  background:$background-btn2;
+		color:$contato;
+         transition : box-shadow .5s;
+		 padding: $paddingContato  ;
+		 border:$bordercontato;
+		 
+		 border-radius:$contatoradius;
+		  	
+
+	
+		}
+		
+		
+		.btnf button:hover{
+		
+		box-shadow: 0 8px 30px red; /* sombra mais intensa ao passar o mouse */
+
+		}
+		
+		
+		
+		.nav2 button:nth-child(1){
+		 @include btn(flex,center,center,center,$background-btn,none,10px,8px);
+		 
+		 color:$color ;
+		 
+		 transition: box-shadow .5s;
+			
+		}
+		
+		.nav2 button:nth-child(1):hover{
+		 
+		 color:$color;
+		 
+		 box-shadow : 1px 2px 30px red;
+			
+		}
+   
+   
+#dot {
+    display:flex;
+	width: 10px;
+    height: 10px;
+    border-radius: 50%;
+		
+	transition: background 0.5s ease; /* Transição suave */
+}
