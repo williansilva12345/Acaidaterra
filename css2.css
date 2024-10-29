@@ -92,8 +92,6 @@ section:nth-child(1) {
 .subtitulo h1 {
   display: flex;
   text-align: center;
-  margin: 0;
-  justify-content: center;
 }
 
 .subtitulo p {
@@ -214,16 +212,56 @@ li a {
   font-weight: 400;
   font-style: normal;
   padding: 16px;
+  maring-top: 50px;
 }
 
 #text {
+  opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.nav1, nav2 {
+.nav1, .nav2 {
   font-family: "Alata", sans-serif;
 }
 
+.subtitulo h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* Importante para o efeito de animação */
+}
+
+#texth1 {
+  -webkit-text-stroke: 1px #ff386e;
+  text-transform: uppercase;
+  color: transparent; /* Para o texto ser transparente, use esta propriedade */
+  font-size: 3rem; /* Tente um tamanho menor */
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+
+#texth1:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 20px;
+  width: 0; /* Começa com 0 */
+  height: 50%;
+  color: #ff386e;
+  -webkit-text-stroke: 0px;
+  border-right: 1px solid #ff386e;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0; /* Começa e termina com 0 */
+  }
+  100% {
+    width: 90%;
+  }
+}
 .bannerimg {
   display: flex;
   align-items: center;
