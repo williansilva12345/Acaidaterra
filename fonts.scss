@@ -7,6 +7,22 @@
   font-size:4rem;
   padding:20px;
 }
+#SobreT{
+
+
+  font-family: "Exo 2", sans-serif;
+  
+
+
+}
+ul li {
+ 
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
 
 .subtitulo p {
 
@@ -28,25 +44,25 @@
 			    font-family: "Alata", sans-serif;
 
   }
-
-  //h1 
+	
+   
     
-         .subtitulo h1 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 4rem;
-            padding: 20px;
-            position: relative;
-            overflow: hidden; /* Importante para o efeito de animação */
-        }
 
         #texth1 {
+			     font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 4rem;
+            padding: 19px;
+			
+			position:relative;
+			overflow:hidden;
             -webkit-text-stroke: 1px #ff386e;
             text-transform: uppercase;
             color: transparent; /* Para o texto ser transparente, use esta propriedade */
 			 font-size: 3rem; /* Tente um tamanho menor */
 			     white-space: nowrap; /* Impede a quebra de linha */
-			 
+			
+			
         }
 
         #texth1:before {

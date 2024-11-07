@@ -52,7 +52,7 @@
 
 .titulo {
   display: flex;
-  height: 750px;
+  height: 600px;
   justify-content: space-around;
 }
 
@@ -73,26 +73,11 @@ section {
 section:nth-child(1) {
   /* display: flex; */
   flex-direction: column;
-  background: #000000 !important;
-  height: 500px;
 }
 
 .sobreT h2 {
   font-size: 100px;
   color: white;
-}
-
-.sobre ul {
-  color: white !important;
-  font-size: 21px;
-}
-
-.beneficios ul {
-  align-self: center;
-}
-
-.sobre ul li {
-  padding: 5px;
 }
 
 .subtitulo p {
@@ -156,178 +141,8 @@ section:nth-child(1) {
   background: purple !important;
 }
 
-#SobreT {
-  font-size: 6em;
-  color: transparent;
-  background: linear-gradient(to right, #ff0080, #ff8c00, #ffd700, #00ff00, #00ffff, #0000ff, #800080, #ff0080);
-  background-clip: text;
-  background-size: 200% auto;
-  animation: anima2 5s linear infinite;
-}
-
-.beneficios {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 26%;
-  width: 70%;
-  position: relative;
-  overflow: hidden;
-  padding: 50px;
-  background: linear-gradient(135deg, #6a0dad, #9b59b6);
-  border-radius: 5px;
-}
-
-.img2 {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  width: 28%;
-  align-self: flex-start;
-}
-
-.img2 img {
-  height: 50px;
-}
-
-.beneficios span:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  animation: anima1 2s linear infinite;
-  background: linear-gradient(to right, purple, yellow);
-}
-
-@keyframes anima1 {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    tranform: translateX(100%);
-  }
-}
-.beneficios span:nth-child(2) {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(to right, purple, yellow);
-  animation: animaa2 2s linear infinite;
-}
-
-@keyframes animaa2 {
-  0% {
-    transform: translateY(-100%); /* Corrigido de tranform para transform */
-  }
-  100% {
-    transform: translateY(100%); /* Corrigido de tranform para transform */
-  }
-}
-.beneficios span:nth-child(3) {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, orange, blue);
-  animation: animaa3 2s linear infinite;
-}
-
-@keyframes animaa3 {
-  0% {
-    transform: translatex(100%); /* Corrigido de tranform para transform */
-  }
-  100% {
-    transform: translateY(-100%); /* Corrigido de tranform para transform */
-  }
-}
-.beneficios span:nth-child(4) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(to right, purple, yellow);
-  animation: animaa4 5s linear infinite;
-}
-
-@keyframes animaa4 {
-  0% {
-    transform: translateY(100%); /* Corrigido de tranform para transform */
-  }
-  100% {
-    transform: translateY(-100%); /* Corrigido de tranform para transform */
-  }
-}
-.beneficios p {
-  color: white;
-}
-
-@keyframes anima2 {
-  0% {
-    background-position: 200%, 50%;
-  }
-  100% {
-    background-position: 0%, 50%;
-  }
-}
-.subsobre {
-  display: flex;
-  justify-content: space-around;
-}
-
-.subsobre ul {
-  color: white;
-}
-
-.subsobre ul {
-  margin: 50px;
-  padding: 10px;
-}
-
-.sobreh1 {
-  height: 133px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-[data-anima] {
-  opacity: 0;
-  transition: 0.5s;
-}
-
-[data-anima=esquerda] {
-  transform: translate3d(-80px, 0, 0);
-}
-
-[data-anima=direita] {
-  tranform: translate3d(90px, 0, 0);
-}
-
-[data-anima=centro] {
-  transform: translate3d(0, 50px, 0);
-}
-
-[data-anima].animacao {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-.desfilho {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.desfilho img {
-  width: 50px;
-  display: block;
-  padding: 5px;
+.SobreT {
+  font-size: 6rem;
 }
 
 .active {
@@ -360,10 +175,6 @@ nav {
   text-decoration: none;
   background: none;
   align-items: center;
-}
-
-header {
-  height: 900px;
 }
 
 .nav1 {
@@ -423,28 +234,12 @@ body {
   padding-top: 45px;
 }
 
-ul li {
-  font-family: "Kanit", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
 .subtitulo h1 {
   font-family: "Poppins", sans-serif; /* Troque por qualquer uma das fontes sugeridas */
   font-weight: 600;
   font-style: normal;
   font-size: 4rem;
   padding: 20px;
-}
-
-#SobreT {
-  font-family: "Exo 2", sans-serif;
-}
-
-ul li {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 .subtitulo p {
@@ -520,8 +315,4 @@ body {
   background: #cad600;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/*# sourceMappingURL=css2.css.map */
+/*# sourceMappingURL=css2,css.map */

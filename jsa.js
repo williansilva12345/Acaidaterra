@@ -1,29 +1,77 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const phrases = [
-        "Açaí da Terra",
-        "O melhor Açaí",
-        "Venha provar!"
-    ];
 
-    const colors = ["purple", "black", "red"];
-    const fonts = ["Arial, sans-serif", "Courier New, monospace", "Arial, sans-serif"];
-    let index = 0;
+    const sections = document.querySelectorAll('section'); // Seleciona todas as seções
+    const navLinks = document.querySelectorAll('.nav1 a'); // Seleciona todos os links de navegação
 
-    function changeText() {
-        const textElement = document.getElementById('text');
-        textElement.style.opacity = 0; // Desaparece
 
-        setTimeout(() => {
-            textElement.textContent = phrases[index];
-            textElement.style.color = colors[index];
-            textElement.style.fontFamily = fonts[index];
-            textElement.style.textShadow = "2px 2px 8px rgba(0, 0, 0, 0.2)";
-            textElement.style.opacity = 1; // Aparece
-            index = (index + 1) % phrases.length; // Atualiza o índice
-        }, 500); // Tempo de espera antes da mudança
 
-        setTimeout(changeText, 2000); // Tempo entre as mudanças
-    }
+    window.addEventListener('scroll', () => {
+			
+			let indexSec =-1
+			
+	sections.forEach((section,index)=>{
+		
+		var secTop = section.offsetTop;
+		var secHeig = section.clientHeight;
+		
+		if(window.pageYOffset >=secTop -secHeig - 3){
+			
+			indexSec = index
+			
+	
+			
+		}
+		
+		
+		
+		
+	})
+	
+		navLinks.forEach((link,index)=>{
+				
+					link.classList.remove("active")
+			
+		if(indexSec === index){
+			
+			link.classList.add("active")
+			
+		}
+			
+		})
+			
+			
+    });
 
-    changeText(); // Inicia o rotator
-});
+const elementos = document.querySelectorAll('[data-anima]')
+const animacao  = "animacao";
+
+
+	function animaScroll(){
+		
+		var scroll = window.pageYOffset +500;
+		
+		
+		elementos.forEach((el)=>{
+			
+			if(scroll > el.offsetTop){
+				
+				el.classList.add("animacao")
+				
+			}else{
+				
+				el.classList.remove("animacao")
+			}
+			
+		})
+		
+		
+	}
+	
+	if(elementos.length){
+		
+		window.addEventListener("scroll",()=>{
+			
+			animaScroll()
+			
+		})
+		
+	}

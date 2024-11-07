@@ -1,22 +1,30 @@
-@import "cores.scss"; // Certifique-se de que as cores estão definidas neste arquivo.
+@import "cores.scss"; // Certifique-se de que as variáveis estão definidas neste arquivo
 
-// li , nav,ul,a 
-
-@mixin li($display, $list-style, $padding, $text, $nav) {
+// Mixin para estilizar li e outros elementos de navegação
+@mixin li($display: block, $list-style: none, $padding: 0, $text: none, $nav: transparent) {
   display: $display;
   list-style: $list-style;
   padding: $padding;
   text-decoration: $text;
   background: $nav;
 }
+.active {
+	
+	background:purple!important;
+	color:white;
+	padding:10px;
+	border-radius:10px
 
+}
 nav {
-
   @include li(flex, none, 9px, none, $nav);
-	   justify-content:space-around;
-	   
- 
-
+  justify-content: space-around;
+  position: fixed; /* Fixa a navegação no topo */
+  top: 0; /* Alinha ao topo da página */
+  left: 0; /* Alinha à esquerda da página */
+  right:  0; /* Alinha à direita da página */
+  botto:0;
+  z-index: 1000; /* Garante que a nav fique acima de outros elementos */
 }
 
 .nav1,
@@ -25,59 +33,73 @@ nav {
   align-items: center;
 }
 
+	
+	header{
+		
+		height:900px
+	
+	}
 
 .nav1 {
   @include li(flex, none, 0px, none, none);
   justify-content: space-around;
   text-align: center;
-						   
-	
-	  border-radius:10px;
+  background: #fc376e;
+  height: 45px; /* Altura da barra de navegação */
+  padding: 4px;
+  align-self: center;
+  border-radius: 10px;
 
-	  
-	 
   a {
     position: relative;
-	letter-spacing:3px;
+    letter-spacing: 3px;
+    color: $colornav1; // Defina uma cor padrão
+
     &:before {
       content: "";
       position: absolute;
       width: 0;
       height: 2px;
-	background:purple;
-	top: 100%;
-      bottom: 0;
-      transition: 0.5s;
+      background: purple;
+      top: 100%;
+      transition: width 0.5s;
     }
 
     &:hover:before {
-      width: 50%; /* Expande a largura ao passar o mouse */
-      transform: translateX(100%);
+      width: 100%;
     }
   }
+}
+
+.nav1 a {
+  text-decoration: none;
+  color: $colornav1;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    letter-spacing: 5px;
+    line-height: 5px;
+  }
+}
+
+.nav2 a {
+  text-decoration: none;
+  color: $colornav2;
+  background: black;
+  padding: 5px;
 }
 
 li a {
   margin: 10px; // Certifique-se de que este seletor está no contexto correto
 }
-	.nav1 a{
-	  
-	  text-decoration:none;
-	  color:$colornav1;
-	  transition:all 0.5s ease-in-out;
-   }
-   
-   .nav1 a:hover{
-	
-		letter-spacing:5px;
-		line-height:5px;
-   
-   }
-   
-   .nav2 a{
-		
-		text-decoration:none;
-		color:$colornav2;
-   
-				  }
-   
+
+// Adicione um padding-top ao body ou ao main para evitar que o conteúdo fique atrás da nav fixa
+body {
+  padding-top: 45px; // Ajuste a altura conforme necessário
+}
+ul li {
+ font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+
+}
