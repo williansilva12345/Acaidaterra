@@ -561,7 +561,7 @@ ul li {
   padding: 19px;
   position: relative;
   overflow: hidden;
-  -webkit-text-stroke: 1px #ff386e;
+  -webkit-text-stroke: 1px yellow;
   text-transform: uppercase;
   color: transparent; /* Para o texto ser transparente, use esta propriedade */
   font-size: 3rem; /* Tente um tamanho menor */
@@ -573,7 +573,7 @@ ul li {
   top: 20px;
   width: 0; /* Começa com 0 */
   height: 50%;
-  color: #ff386e;
+  color: yellow;
   -webkit-text-stroke: 0px;
   border-right: 1px solid #ff386e;
   overflow: hidden;
@@ -661,6 +661,7 @@ html {
     margin: auto;
     overflow: hidden;
     text-align: center;
+	background:orange;
     height: 100vh; /* Define que a altura do carrossel será 100% da altura da tela */
 }
 
@@ -707,25 +708,31 @@ background: linear-gradient(45deg, yellow, purple, black);
 }
 			.carousel-slide:nth-child(3) img{
 				
-					position:absolute;
-					top:16%;
-					display:flex;
-					height:auto;
+				    position: absolute;
+    top: 24%;
+    display: flex
+;
+    height: auto;
+
 
 
 		 }
 
 /* Estilos da imagem do slide */
 .carousel-slide img {
-     width: 34%;
-    height: 56%;
+width: 283px;
+    height: 266px;
+    max-width: 466px;
+    max-height: 300px;
     object-fit: cover;
     position: absolute;
-    top: 55px;
-    left: 33%;
+    top: 20%;
+    left: 41%;
     z-index: 1;
-	animation: anima 5s infinite alternate;`
+    animation: anima 5s infinite alternate;
+
 }
+
 .texto2{
 	    padding: 26px;
 }
@@ -817,13 +824,83 @@ background: linear-gradient(45deg, yellow, purple, black);
 	
 }
 
+
 #img2{
-	    position: absolute;
-    top: 14%;
+position: absolute;
+    top: 130px;
+
+
+}
+   .cardpai{
+	   
+	   display:flex;
+	   justify-content:center;
+	   align-self:center;
+	   text-align:center;
+	   align-items:center;
+   }
+.card{
+	
+    width: 273px;
+   
+    height: 324px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
 }
 
-#img2{
-	    position: absolute;
-    top: 113px;
+.orange {
+	
+	background:purple;
+  
+}
 
+.orange img {
+	    animation: anima 5s infinite alternate;
+
+}
+#img1{
+
+
+    position: absolute;
+    top: 20%;
+    
+}
+#subcard #subcard2{
+	
+
+    height: 270px;
+    background: purple;
+    width: 500px;
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    text-align: center;
+    color: white;
+
+}
+
+#videos{
+   background: black;
+    height: 572px;
+
+	
+}
+#ul2{
+	color:white;
+
+}
+
+#ul2 li{
+	
+	margin:10px;
+	text-align:justify;
+}
+#subcard h1 {
+	
+	font-size:14vh;
+	
 }
