@@ -1,9 +1,7 @@
+
 	
 	
-		const arr = [1,2,3,4,5]
-		
-		
-		const value2 = arr.filter(el => el>2)? "trur" : "False";
-		
-				   console.log(value2.el)
-		
+						// main.js
+			const soma = require('./soma');  // Importa a função do módulo 'somar.js'
+
+			console.log(soma(2, 3));  // Saída: 5

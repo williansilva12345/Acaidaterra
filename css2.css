@@ -73,7 +73,6 @@ section {
 section:nth-child(1) {
   /* display: flex; */
   flex-direction: column;
-  background: #281028 !important;
   height: 500px;
 }
 
@@ -417,16 +416,11 @@ header {
 
 li a {
   margin: 10px;
-}
-
-body {
-  padding-top: 45px;
+  color: orange;
 }
 
 ul li {
-  font-family: "Kanit", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+  font-family: "Dosis", sans-serif;
 }
 
 .subtitulo h1 {
@@ -476,7 +470,74 @@ ul li {
   white-space: nowrap; /* Impede a quebra de linha */
 }
 
-#texth1:before {
+#textp {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  padding: 19px;
+  position: relative;
+  overflow: hidden;
+  -webkit-text-stroke: 1px #ff386e;
+  text-transform: uppercase;
+  color: transparent; /* Para o texto ser transparente, use esta propriedade */
+  font-size: 3rem; /* Tente um tamanho menor */
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+  
+#textp:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 20px;
+  width: 0; /* Começa com 0 */
+  height: 50%;
+  color: black;
+  -webkit-text-stroke: 0px;
+  border-right: 1px solid #ff386e;
+  overflow: hidden;
+  animation: animate2 5s linear infinite;
+}
+#textp3 {
+      font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    padding: 19px;
+    position: relative;
+    overflow: hidden;
+    -webkit-text-stroke: 1px white;
+    text-transform: uppercase;
+    color: transparent;
+    font-size: 3rem;
+    white-space: nowrap;
+    margin-top: 34px;
+
+}
+#textp3:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 20px;
+  width: 0; /* Começa com 0 */
+  height: 50%;
+  color: purple;
+  -webkit-text-stroke: 0px;
+  border-right: 1px solid black;
+  overflow: hidden;
+  animation: animate3 5s linear infinite;
+}
+
+#textp {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  padding: 19px;
+  position: relative;
+  overflow: hidden;
+  -webkit-text-stroke: 1px #ff386e;
+  text-transform: uppercase;
+  color: transparent; /* Para o texto ser transparente, use esta propriedade */
+  font-size: 3rem; /* Tente um tamanho menor */
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+#textp:before {
   content: attr(data-text);
   position: absolute;
   top: 20px;
@@ -486,15 +547,49 @@ ul li {
   -webkit-text-stroke: 0px;
   border-right: 1px solid #ff386e;
   overflow: hidden;
+  animation: animate2 5s linear infinite;
+}
+  
+ @keyframes animate2 {
+  0% {
+    width: 0; /* Começa e termina com 0 */
+  }
+  100% {
+    width: 43%;
+  }
+}
+   @keyframes animate3 {
+  0% {
+    width: 0; /* Começa e termina com 0 */
+  }
+  100% {
+    width: 48%;
+  }
+}
+
+
+#texth1:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 20px;
+  width:50px; /* Começa com 0 */
+  height: 50%;
+  color: #ff386e;
+  -webkit-text-stroke: 0px;
+  border-right: 1px solid #ff386e;
+  overflow: hidden;
   animation: animate 6s linear infinite;
 }
+
+
+
 
 @keyframes animate {
   0% {
     width: 0; /* Começa e termina com 0 */
   }
   100% {
-    width: 90%;
+    width: 100%;
   }
 }
 .bannerimg {
@@ -527,3 +622,156 @@ html {
 }
 
 /*# sourceMappingURL=css2.css.map */
+/* Estilos gerais do carrossel */
+/* Estilos gerais do carrossel */
+/* Estilos gerais do carrossel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    height: 100vh; /* Define que a altura do carrossel será 100% da altura da tela */
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Garante que o track ocupe toda a largura */
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100vh; /* A altura será 100% da altura da tela */
+    position: relative; /* Permite posicionar elementos sobre a imagem */
+    background-color: #333; /* Cor de fundo para os slides */
+    color: #fff;
+}
+
+.carousel-slide:nth-child(1){
+	
+background: linear-gradient(45deg, yellow, purple, black);
+
+}
+	.carousel-slide:nth-child(2){
+	
+    background: linear-gradient(to right, #4dc4cb, rgb(187 71 195), purple);
+}
+/* Estilos da imagem do slide */
+.carousel-slide img {
+     width: 34%;
+    height: 56%;
+    object-fit: cover;
+    position: absolute;
+    top: 55px;
+    left: 33%;
+    z-index: 1;
+	animation: anima 5s infinite alternate;`
+}
+.texto2{
+	    padding: 26px;
+}
+.texto2 h1{
+	
+	
+	padding:10px;
+	margin-bottom:20px;
+	font-size:34px;
+	
+}
+.texto2 button{
+	
+	background:purple;
+	color:white;
+	padding:5px;
+	border-radius:10px;
+	border:none;
+	
+}
+
+/* Estilos do conteúdo (título e botão) sobre a imagem */
+.carousel-slide .carousel-slide-content {
+    position: absolute;
+    top: 50%; /* Centraliza o conteúdo verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o conteúdo */
+    color: white;
+    z-index: 2; /* Garante que o conteúdo fique acima da imagem */
+    text-align: center;
+}
+
+/* Título */
+.carousel-slide .carousel-slide-content h1 {
+    font-size: 3em; /* Aumentei o tamanho do título */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombras no texto para destacá-lo */
+}
+
+/* Botão */
+.carousel-slide .carousel-slide-content button {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra no botão para dar destaque */
+}
+
+/* Efeito de hover no botão */
+.carousel-slide .carousel-slide-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos dos botões de navegação */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 3;
+    transform: translateY(-50%);
+    transition: background 0.3s ease-in-out;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+.tit3{
+	
+	color:white;
+	
+}
+
+#img2{
+	    position: absolute;
+    top: 14%;
+}
+
+#img2{
+	    position: absolute;
+    top: 113px;
+
+}

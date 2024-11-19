@@ -91,15 +91,13 @@ nav {
 
 li a {
   margin: 10px; // Certifique-se de que este seletor está no contexto correto
+  color:orange;
 }
 
 // Adicione um padding-top ao body ou ao main para evitar que o conteúdo fique atrás da nav fixa
-body {
-  padding-top: 45px; // Ajuste a altura conforme necessário
-}
+
 ul li {
- font-family: "Kanit", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+  font-family: "Dosis", sans-serif;
+
 
 }

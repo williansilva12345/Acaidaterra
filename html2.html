@@ -12,6 +12,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_menu_close" />
 </head>
 <body>
   <header>
@@ -46,61 +47,43 @@
     </header>
 
     <main>
-        <section id="sobre" class="sobre">
-			
-			<div class="sobreh1">
-			
-				<h1 id="SobreT" data-anima="centro"> Sobre  </h1>
-
-				</div>
-			
-			<div class="beneficios" data-anima="centro">
-			<span></span>
-			 <span></span>
-			 <span></span>
-			 <span></span>
-		<ul data-anima="esquerda">
-
-    
-    <li>Rico em <abbr title="Antioxidantes são substâncias que protegem as células contra danos causados por radicais livres.">antioxidantes,</abbr> especialmente <abbr title="Antocianinas são pigmentos que conferem coloração vermelha, roxa e azul a frutas, vegetais e flores, e possuem propriedades benéficas para a saúde.">antocianinas.</abbr></li>
-    <li>Fonte de <abbr title="Vitaminas são nutrientes essenciais que o corpo precisa para funcionar corretamente.">vitaminas</abbr> e <abbr title="Minerais são substâncias inorgânicas necessárias para várias funções corporais.">minerais</abbr>, como vitamina A e cálcio.</li>
-    <li>Contém <abbr title="Ácidos graxos essenciais são gorduras que o corpo não pode produzir e que são necessárias para a saúde.">ácidos graxos essenciais</abbr>, como ômega-3.</li>
-    <li>Ajuda a melhorar a <abbr title="Saúde cardiovascular refere-se ao estado do coração e dos vasos sanguíneos, e sua função adequada.">saúde cardiovascular.</abbr></li>
-    <li>Promove a <abbr title="A saúde da pele envolve a manutenção de uma pele limpa, hidratada e livre de doenças.">saúde da pele</abbr> e do <abbr title="A saúde do cabelo refere-se à manutenção de cabelo forte, saudável e livre de danos.">cabelo.</abbr></li>
-</ul>
-
-
-			 <div class="descricao">
-
-<div class="desfilho" data-anima="direita">
-    <a href="https://mail.google.com" target="_blank">
-        <img src="./gmail.png" alt="Gmail">
-    </a>
-    <a href="https://williansilva12345.github.io/Acaidaterra/html2.html" target="_blank">
-        <img src="./github.png" alt="GitHub">
-    </a>
-    <a href="https://www.youtube.com/@willi_ansilvaoliveira" target="_blank">
-        <img src="./youtube.png" alt="YouTube">
-    </a>
-</div>
-				</div>
 		
-			</div>
-			
-			<div class="img2">
-			
-			<img src="./acai.png">
+	<section class="carousel">
+    <!-- Botão Esquerdo -->
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
 
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+			
+			<div class="texto2">			
+			
+			<h1 class="tit2" id="textp" data-text="Acai da terra power"> Acai da terra power</h1>
 			
 			</div>
+				    
+			<img src="C:\Users\Administrator\Desktop\css curso\popenergy_caixa_10litros__1_-removebg-preview.png">
+            </div>
+            <div class="carousel-slide">
+				 
 
+				 <h1 class="tit3" id="textp3" data-text="Acai da terra Organico"> Acai da terra Organico</h1>
+
+				<img class="img2" id="img2" src="C:\Users\Administrator\Desktop\css curso\foto-removebg-preview.png">
 			
-		
-		
-		
-        </section>
+            </div>
+            <div class="carousel-slide">
+                <p>Slide 3</p>
+            </div>
+        </div>
+    </div>
 
-        <section id="projetos" class="product-slider">
+    <!-- Botão Direito -->
+    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+</section>
+
+	
+	
             <h2>Slider</h2>
             <div>
                 <!-- Conteúdo do slider -->
