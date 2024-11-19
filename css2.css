@@ -709,6 +709,8 @@ background: linear-gradient(45deg, yellow, purple, black);
 				
 					position:absolute;
 					top:16%;
+					display:flex;
+					height:auto;
 
 
 		 }
